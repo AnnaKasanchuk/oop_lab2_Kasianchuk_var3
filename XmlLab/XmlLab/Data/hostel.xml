@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Hostel>
+    <Resident Name="Іваненко Іван Іванович" Faculty="ФКНК" Course="2" Phone="050-111-22-33">
+        <Residence Building="1" Room="101" CheckIn="2025-09-01" CheckOut="2026-06-30"/>
+        <Residence Building="2" Room="215" CheckIn="2026-09-01" CheckOut="2027-06-30"/>
+    </Resident>
+    <Resident Name="Бондар Наталія Юріївна" Faculty="ФКНК" Course="2">
+        <Residence Building="1" Room="102" CheckIn="2025-09-01" CheckOut="2026-06-30"/>
+    </Resident>
+    <Resident Name="Петренко Олена Петрівна" Faculty="ФКНК" Department="ТК" Course="3" Phone="066-222-33-44">
+        <Residence Building="1" Room="104" CheckIn="2024-09-01" CheckOut="2025-06-30"/>
+    </Resident>
+    <Resident Name="Левченко Оксана Ігорівна" Faculty="ФКНК" Department="ТТП" Course="3">
+        <Residence Building="2" Room="203" CheckIn="2024-09-01" CheckOut="2025-06-30"/>
+    </Resident>
+    <Resident Name="Шевчук Дмитро Васильович" Faculty="ФКНК" Department="МІ" Course="4">
+        <Residence Building="2" Room="201" CheckIn="2023-09-01" CheckOut="2024-06-30"/>
+    </Resident>
+    <Resident Name="Коваль Андрій Сергійович" Faculty="ФІТ" Course="1">
+        <Residence Building="3" Room="310" CheckIn="2026-09-01" CheckOut="2027-06-30"/>
+    </Resident>
+    <Resident Name="Мельник Марія Олегівна" Faculty="ФІТ">
+        <Residence Building="3" Room="311" CheckIn="2025-09-01" CheckOut="2026-06-30"/>
+    </Resident>
+</Hostel>

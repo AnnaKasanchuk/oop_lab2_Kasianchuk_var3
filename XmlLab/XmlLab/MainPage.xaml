@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:XmlLab.ViewModels"
+             xmlns:strat="clr-namespace:XmlLab.Strategies"
+             x:Class="XmlLab.MainPage"
+             x:DataType="vm:MainViewModel"
+             Title="Гуртожиток — XML">
+    <ScrollView>
+        <VerticalStackLayout Padding="16" Spacing="10">
+            <Button Text="Обрати XML-файл" Command="{Binding OpenFileCommand}"/>
+            <Label Text="{Binding FilePath}" FontSize="12"/>
+
+            <Picker Title="Метод аналізу"
+                    ItemsSource="{Binding Strategies}"
+                    ItemDisplayBinding="{Binding Name, x:DataType=strat:ISearchStrategy}"
+                    SelectedItem="{Binding SelectedStrategy}"/>
+            <Picker Title="Атрибут" ItemsSource="{Binding AttributeNames}"
+                    SelectedItem="{Binding SelectedAttribute}"/>
+            <Picker Title="Значення" ItemsSource="{Binding AttributeValues}"
+                    SelectedItem="{Binding SelectedValue}"/>
+            <Button Text="Додати критерій" Command="{Binding AddCriterionCommand}"/>
+
+            <Label Text="Критерії пошуку:" FontAttributes="Bold"/>
+            <CollectionView ItemsSource="{Binding CriteriaView}" HeightRequest="90"/>
+
+            <Grid ColumnDefinitions="*,*,*,*" ColumnSpacing="8">
+                <Button Grid.Column="0" Text="Пошук" Command="{Binding SearchCommand}"/>
+                <Button Grid.Column="1" Text="В HTML" Command="{Binding ExportHtmlCommand}"/>
+                <Button Grid.Column="2" Text="Очистити" Command="{Binding ClearCommand}"/>
+                <Button Grid.Column="3" Text="Вихід" Command="{Binding ExitCommand}"/>
+            </Grid>
+
+            <Editor Text="{Binding Output}" IsReadOnly="True" HeightRequest="300"/>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
